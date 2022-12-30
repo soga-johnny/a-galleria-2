@@ -12,6 +12,7 @@ return (
            >
             <p>
                 Preparing AR contents...
+                please waita few days.
             </p>
             <button>
             <Link href="/">
