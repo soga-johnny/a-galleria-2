@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Image, Scroll, ScrollControls, useScroll } from "@react-three/drei"
+import { useRef } from 'react'
 import Link from 'next/link'
 import styles from '../styles/Home.module.scss'
-import { useRef } from 'react'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { Image, Scroll, ScrollControls, useScroll } from "@react-three/drei"
 import { motion } from "framer-motion";
 
 
@@ -105,9 +105,9 @@ export default function Home() {
             </Link>
               </button>
               <div className={styles.footerLogo}>
-                <Link href="/">
+                {/* <Link href="/">
                   <h2>A-galleria</h2>
-                </Link>
+                </Link> */}
               </div>
              </footer>
 

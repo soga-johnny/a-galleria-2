@@ -1,8 +1,17 @@
+import dynamic from "next/dynamic"
 import Link from 'next/link'
 import { motion } from "framer-motion";
 import styles from '../styles/Home.module.scss'
+// import Ar from '../components/Ar'
+import { Scene } from 'react-aframe-ar/dist/core';
 
-export default function Scan() {
+
+const Arssr = dynamic(() => 
+import("../components/Ar"), {
+ssr: false,
+})
+
+export default function scan() {
 return (
     <div className={styles.container}>
         <motion.div className={styles.comingSoon}
@@ -10,10 +19,15 @@ return (
            animate={{ opacity: 1, y: 50 }}
            transition={{  duration: 1, delay: 1, ease: "easeInOut" }}
            >
-            <p>
+            <Scene>
+            < Arssr />
+            </Scene>
+
+
+             <p>
                 Preparing AR contents...
                 please waita few days.
-            </p>
+            </p> 
             <button>
             <Link href="/">
             Back
